@@ -1,19 +1,19 @@
 pipeline {
-	agent any 
+	agent any
 	tools {
-  		maven 'maven2'
-        }
+		maven 'maven2'
+    }
 	stages {
 		stage ("scm checkout") {
-			steps {
-				git 'https://github.com/somnath6325/my-app.git'
+			steps { 
+			 git 'https://github.com/javahometech/my-app.git'
 			}
 		}
 	}
-		stage ("Maven build") {
-			steps {
-				sh "mvn clean package"
+		stage ("maven Build") {
+		steps {
+			sh "mvn clean package"
 		}
-	}
-}	
-				
+	}	
+}			
+
