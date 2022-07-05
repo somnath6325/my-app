@@ -9,6 +9,11 @@ pipeline {
 	git 'https://github.com/somnath6325/my-app.git'
       }
     }
+    stage("Build maven") {
+      steps {
+	sh "mvn clean package" 
+      }
+    }	    
   }
 }
 	      
