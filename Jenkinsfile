@@ -9,6 +9,11 @@ pipeline {
 			 git 'https://github.com/javahometech/my-app.git'
 			}
 		}
+		stage ("maven build") {
+			steps { 
+			 sh "mvn clean package"
+			}
+		}
 	}
 		
 }			
